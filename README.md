@@ -1,17 +1,19 @@
-**Ćwiczenie: Przypomnienie podstaw HTML i zewnętrznego stylu CSS**
+**Ćwiczenie: Tworzenie strony internetowej salonu kosmetycznego**
 
 ---
 
 ### **Część I: Tutorial krok po kroku**
 
-W tym ćwiczeniu odświeżymy podstawy tworzenia strony internetowej za pomocą HTML i CSS. Wykonaj poniższe kroki, pamiętając o wykonywaniu commitów z opisami po każdym etapie.
+W tym ćwiczeniu stworzymy kompletną stronę internetową dla salonu kosmetycznego. Wykonaj poniższe kroki, pamiętając o wykonywaniu commitów z opisami po każdym etapie.
 
 ---
 
 #### **Krok 1: Inicjalizacja projektu**
 
-1. **Utwórz nowy folder projektu.**
+1. **Utwórz nowy folder projektu o nazwie `SalonKosmetyczny`.**
+
 2. **W folderze projektu utwórz plik `index.html`.**
+
 3. **Dodaj do `index.html` podstawową strukturę HTML:**
 
    ```html
@@ -19,7 +21,7 @@ W tym ćwiczeniu odświeżymy podstawy tworzenia strony internetowej za pomocą 
    <html lang="pl">
    <head>
        <meta charset="UTF-8">
-       <title>Moja Strona</title>
+       <title>Salon Kosmetyczny BeautySpa</title>
        <link rel="stylesheet" href="style.css">
    </head>
    <body>
@@ -28,207 +30,409 @@ W tym ćwiczeniu odświeżymy podstawy tworzenia strony internetowej za pomocą 
    </html>
    ```
 
+   **Wyjaśnienie kodu:**
+
+   - `<!DOCTYPE html>` – deklaruje, że dokument jest w formacie HTML5.
+   - `<html lang="pl">` – otwiera element HTML i ustawia język dokumentu na polski.
+   - `<head>` – sekcja nagłówkowa zawierająca metadane dokumentu.
+     - `<meta charset="UTF-8">` – ustawia kodowanie znaków na UTF-8.
+     - `<title>Salon Kosmetyczny BeautySpa</title>` – tytuł strony wyświetlany na karcie przeglądarki.
+     - `<link rel="stylesheet" href="style.css">` – łączy zewnętrzny arkusz stylów `style.css`.
+   - `<body>` – główna sekcja dokumentu, w której będzie zawarta treść strony.
+   - `</body>` – zamyka sekcję `<body>`.
+   - `</html>` – zamyka element `<html>`.
+
 4. **Utwórz plik `style.css` w tym samym folderze.**
 
-**Commit:** "Inicjalizacja projektu - dodanie index.html i style.css z podstawową strukturą"
+**Commit:** "Inicjalizacja projektu - dodanie plików index.html i style.css z podstawową strukturą"
 
 ---
 
 #### **Krok 2: Podział strony na 4 bloki**
 
-1. **W pliku `index.html`, w sekcji `<body>`, dodaj cztery elementy `<div>` z klasami:**
+1. **W pliku `index.html`, w sekcji `<body>`, dodaj cztery elementy `<div>` z identyfikatorami:**
 
    ```html
-   <div class="blok1">Blok 1</div>
-   <div class="blok2">Blok 2</div>
-   <div class="blok3">Blok 3</div>
-   <div class="blok4">Blok 4</div>
+   <div id="header"> <!-- Nagłówek strony -->
+       <h1>BeautySpa - Twoje miejsce relaksu</h1>
+   </div>
+
+   <div id="menu"> <!-- Menu nawigacyjne -->
+       <ul>
+           <li><a href="index.html">Strona główna</a></li>
+           <li><a href="oferta.html">Oferta</a></li>
+           <li><a href="kontakt.html">Kontakt</a></li>
+           <li><a href="https://www.facebook.com/BeautySpa" target="_blank">Facebook</a></li>
+       </ul>
+   </div>
+
+   <div id="content"> <!-- Główna treść strony -->
+       <!-- Treść zostanie dodana w kolejnym kroku -->
+   </div>
+
+   <div id="footer"> <!-- Stopka strony -->
+       <p>&copy; 2023 BeautySpa - Salon Kosmetyczny</p>
+   </div>
    ```
 
-2. **W pliku `style.css` dodaj podstawowe style dla tych bloków:**
+   **Wyjaśnienie kodu:**
+
+   - `<div id="header">` – nagłówek strony z identyfikatorem `header`.
+     - `<h1>BeautySpa - Twoje miejsce relaksu</h1>` – nagłówek pierwszego poziomu z nazwą salonu i sloganem.
+   - `<div id="menu">` – menu nawigacyjne z identyfikatorem `menu`.
+     - Lista linków do różnych podstron oraz do strony zewnętrznej (Facebook).
+   - `<div id="content">` – sekcja głównej treści strony.
+   - `<div id="footer">` – stopka strony z identyfikatorem `footer`.
+
+2. **Utwórz styl w `style.css` dla podstawowego układu strony:**
 
    ```css
-   .blok1, .blok2, .blok3, .blok4 {
-       width: 200px;
-       height: 100px;
-       margin: 10px;
-       display: inline-block;
-   }
-   ```
-
-**Commit:** "Dodanie 4 bloków na stronie"
-
----
-
-#### **Krok 3: Ustawienie szerokości, wysokości, kolorów, marginesów**
-
-1. **Dodaj indywidualne style dla każdego bloku w `style.css`:**
-
-   ```css
-   .blok1 {
-       background-color: red;
+   body {
+       margin: 0;
+       font-family: Arial, sans-serif;
+       background-color: #f9f9f9;
    }
 
-   .blok2 {
-       background-color: blue;
+   #header, #menu, #content, #footer {
+       width: 100%;
    }
 
-   .blok3 {
-       background-color: green;
-   }
-
-   .blok4 {
-       background-color: yellow;
-   }
-   ```
-
-**Commit:** "Ustawienie stylów dla bloków - kolory i rozmiary"
-
----
-
-#### **Krok 4: Ustawienie koloru czcionki i wielkości**
-
-1. **Dodaj style dla tekstu wewnątrz bloków w `style.css`:**
-
-   ```css
-   .blok1, .blok2, .blok3, .blok4 {
-       color: white;
-       font-size: 16px;
+   #header {
+       background-color: #e0acd5;
+       color: #fff;
+       padding: 40px 20px;
        text-align: center;
-       line-height: 100px; /* Centrowanie tekstu w pionie */
+   }
+
+   #menu {
+       background-color: #333;
+   }
+
+   #menu ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+   }
+
+   #menu li {
+       float: left;
+   }
+
+   #menu li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 20px;
+       text-decoration: none;
+   }
+
+   #menu li a:hover {
+       background-color: #111;
+   }
+
+   #content {
+       padding: 20px;
+   }
+
+   #footer {
+       background-color: #e0acd5;
+       color: #fff;
+       text-align: center;
+       padding: 20px;
    }
    ```
 
-**Commit:** "Ustawienie stylów dla tekstu - kolor i rozmiar czcionki"
+   **Wyjaśnienie kodu:**
+
+   - `body` – ustawia marginesy na 0, rodzinę fontów na Arial i tło strony na jasnoszare.
+   - `#header` – ustawia tło nagłówka na kolor różowy (#e0acd5), kolor tekstu na biały, wewnętrzne odstępy i wyśrodkowanie tekstu.
+   - `#menu` i jego elementy – tworzy poziome menu nawigacyjne z ciemnoszarym tłem i białym tekstem.
+   - `#content` – wewnętrzne odstępy dla treści.
+   - `#footer` – styl stopki z tym samym tłem co nagłówek.
+
+**Commit:** "Dodanie 4 bloków strony z podstawowym stylem dla salonu kosmetycznego"
 
 ---
 
-#### **Krok 5: Dodanie linku do podstrony**
+#### **Krok 3: Dodanie treści do sekcji "content"**
 
-1. **Utwórz nowy plik `podstrona.html` z podstawową strukturą HTML:**
-
-   ```html
-   <!DOCTYPE html>
-   <html lang="pl">
-   <head>
-       <meta charset="UTF-8">
-       <title>Podstrona</title>
-   </head>
-   <body>
-       <h1>To jest podstrona</h1>
-   </body>
-   </html>
-   ```
-
-2. **Dodaj link do podstrony w `index.html`:**
+1. **W sekcji `<div id="content">`, dodaj treści związane z salonem kosmetycznym:**
 
    ```html
-   <a href="podstrona.html">Przejdź do podstrony</a>
+   <h2>O nas</h2>
+   <p>BeautySpa to wyjątkowe miejsce, gdzie możesz zrelaksować się i zadbać o swoje piękno. Oferujemy szeroką gamę zabiegów kosmetycznych i relaksacyjnych.</p>
+
+   <h2>Nasze usługi</h2>
+   <ul>
+       <li>Masaż relaksacyjny</li>
+       <li>Zabiegi na twarz</li>
+       <li>Manicure i pedicure</li>
+       <li>Depilacja laserowa</li>
+   </ul>
+
+   <h2>Godziny otwarcia</h2>
+   <p>Poniedziałek - Piątek: 9:00 - 19:00<br>
+      Sobota: 10:00 - 16:00<br>
+      Niedziela: Nieczynne</p>
    ```
 
-**Commit:** "Dodanie linku do podstrony"
+   **Wyjaśnienie kodu:**
+
+   - **Sekcja "O nas":**
+     - `<h2>` – nagłówek drugiego poziomu.
+     - `<p>` – paragraf z opisem salonu.
+   - **Sekcja "Nasze usługi":**
+     - `<ul>` – lista nienumerowana z oferowanymi usługami.
+     - `<li>` – elementy listy z nazwami usług.
+   - **Sekcja "Godziny otwarcia":**
+     - `<p>` – paragraf z informacjami o godzinach otwarcia, używający znacznika `<br>` do łamania linii.
+
+**Commit:** "Dodanie treści związanych z salonem kosmetycznym do sekcji content"
 
 ---
 
-#### **Krok 6: Dodanie linku do strony zewnętrznej**
+#### **Krok 4: Dodanie linku do podstrony "Oferta"**
 
-1. **Dodaj link do strony zewnętrznej w `index.html`:**
+1. **Utwórz nowy plik `oferta.html` z podstawową strukturą HTML podobną do `index.html`.**
+
+2. **W pliku `oferta.html`, w sekcji `<div id="content">`, dodaj szczegółowy opis oferty:**
 
    ```html
-   <a href="https://www.google.com" target="_blank">Przejdź do Google</a>
+   <h2>Oferta</h2>
+   <p>Zapoznaj się z naszą pełną ofertą zabiegów kosmetycznych i masaży.</p>
+   <!-- Dodaj szczegółowe opisy poszczególnych usług -->
    ```
 
-**Commit:** "Dodanie linku do strony zewnętrznej"
+3. **Upewnij się, że w menu nawigacyjnym link do `oferta.html` działa poprawnie.**
+
+**Commit:** "Dodanie podstrony 'Oferta' z opisem usług"
+
+---
+
+#### **Krok 5: Dodanie linku do podstrony "Kontakt"**
+
+1. **Utwórz nowy plik `kontakt.html` z podstawową strukturą HTML.**
+
+2. **W pliku `kontakt.html`, w sekcji `<div id="content">`, dodaj dane kontaktowe:**
+
+   ```html
+   <h2>Kontakt</h2>
+   <p>BeautySpa - Salon Kosmetyczny<br>
+      ul. Piękna 1, 00-000 Warszawa<br>
+      Telefon: 123 456 789<br>
+      Email: kontakt@beautyspa.pl</p>
+
+   <h3>Formularz kontaktowy</h3>
+   <form action="#" method="post">
+       <label for="name">Imię:</label><br>
+       <input type="text" id="name" name="name"><br>
+       <label for="email">Email:</label><br>
+       <input type="email" id="email" name="email"><br>
+       <label for="message">Wiadomość:</label><br>
+       <textarea id="message" name="message"></textarea><br>
+       <input type="submit" value="Wyślij">
+   </form>
+   ```
+
+   **Wyjaśnienie kodu:**
+
+   - **Dane kontaktowe:**
+     - Użycie `<p>` i `<br>` do wyświetlenia adresu, telefonu i emaila.
+   - **Formularz kontaktowy:**
+     - `<form>` – rozpoczyna formularz.
+     - `<label>` i `<input>` – pola formularza dla imienia, emaila i wiadomości.
+     - `<textarea>` – pole tekstowe dla wiadomości.
+     - `<input type="submit">` – przycisk do wysłania formularza.
+
+**Commit:** "Dodanie podstrony 'Kontakt' z danymi kontaktowymi i formularzem"
+
+---
+
+#### **Krok 6: Dodanie linku do strony zewnętrznej (Facebook)**
+
+1. **W menu nawigacyjnym mamy już link do strony zewnętrznej (Facebook). Upewnij się, że link otwiera się w nowej karcie:**
+
+   ```html
+   <li><a href="https://www.facebook.com/BeautySpa" target="_blank">Facebook</a></li>
+   ```
+
+   **Wyjaśnienie kodu:**
+
+   - `href="https://www.facebook.com/BeautySpa"` – adres profilu salonu na Facebooku.
+   - `target="_blank"` – powoduje otwarcie linku w nowej karcie przeglądarki.
+
+**Commit:** "Sprawdzenie i potwierdzenie działania linku do Facebooka"
 
 ---
 
 #### **Krok 7: Dodanie dwóch zdjęć z opisami**
 
-1. **Utwórz folder `images` i umieść w nim dwa zdjęcia, np. `obraz1.jpg` i `obraz2.jpg`.**
-2. **Dodaj obrazy z opisami w `index.html`:**
+1. **W folderze projektu utwórz folder `images` i umieść w nim dwa obrazy związane z kosmetyką, np. `masaż.jpg` i `zabieg.jpg`.**
+
+2. **W sekcji `#content` na stronie głównej (`index.html`), dodaj obrazy z opisami:**
 
    ```html
-   <img src="images/obraz1.jpg" alt="Opis pierwszego zdjęcia">
-   <img src="images/obraz2.jpg" alt="Opis drugiego zdjęcia">
+   <h2>Galeria</h2>
+   <figure>
+       <img src="images/masaż.jpg" alt="Masaż relaksacyjny" width="300">
+       <figcaption>Masaż relaksacyjny</figcaption>
+   </figure>
+
+   <figure>
+       <img src="images/zabieg.jpg" alt="Zabieg na twarz" width="300">
+       <figcaption>Zabieg na twarz</figcaption>
+   </figure>
    ```
 
-3. **Dodaj stylizację w `style.css` (opcjonalnie):**
+   **Wyjaśnienie kodu:**
+
+   - **Element `<figure>`** – grupuje obraz z podpisem.
+   - **Element `<img>`** – wstawia obraz.
+     - `src` – ścieżka do obrazu.
+     - `alt` – tekst alternatywny dla obrazu.
+     - `width` – szerokość obrazu w pikselach.
+   - **Element `<figcaption>`** – dodaje podpis pod obrazem.
+
+3. **Dodaj style do obrazów i opisów w `style.css`:**
 
    ```css
-   img {
-       width: 200px;
-       height: auto;
+   figure {
+       display: inline-block;
        margin: 10px;
+       text-align: center;
+   }
+
+   figure img {
+       width: 300px;
+       height: auto;
+       border-radius: 10px;
+   }
+
+   figcaption {
+       margin-top: 5px;
+       font-style: italic;
    }
    ```
 
-**Commit:** "Dodanie zdjęć z opisami"
+   **Wyjaśnienie kodu:**
+
+   - `figure` – ustawia elementy obok siebie z marginesami.
+   - `figure img` – ustawia szerokość obrazów i zaokrągla rogi.
+   - `figcaption` – dodaje odstęp i kursywę do podpisu.
+
+**Commit:** "Dodanie zdjęć usług z opisami do strony głównej"
 
 ---
 
-#### **Krok 8: Dodanie tabeli**
+#### **Krok 8: Dodanie tabeli z cennikiem**
 
-1. **Dodaj tabelę w `index.html`:**
+1. **W sekcji `#content` na stronie `oferta.html`, dodaj tabelę prezentującą cennik usług:**
 
    ```html
-   <table border="1">
+   <h2>Cennik usług</h2>
+   <table>
        <tr>
-           <th>Imię</th>
-           <th>Nazwisko</th>
-           <th>Wiek</th>
+           <th>Usługa</th>
+           <th>Czas trwania</th>
+           <th>Cena</th>
        </tr>
        <tr>
-           <td>Jan</td>
-           <td>Kowalski</td>
-           <td>30</td>
+           <td>Masaż relaksacyjny</td>
+           <td>60 min</td>
+           <td>150 zł</td>
        </tr>
        <tr>
-           <td>Anna</td>
-           <td>Nowak</td>
-           <td>25</td>
+           <td>Zabieg na twarz</td>
+           <td>45 min</td>
+           <td>120 zł</td>
+       </tr>
+       <tr>
+           <td>Manicure</td>
+           <td>30 min</td>
+           <td>70 zł</td>
        </tr>
    </table>
    ```
+
+   **Wyjaśnienie kodu:**
+
+   - **Tabela `<table>`** – przedstawia dane w formie tabelarycznej.
+   - **Wiersze `<tr>`** – reprezentują wiersze tabeli.
+   - **Nagłówki `<th>`** – komórki nagłówkowe tabeli.
+   - **Dane `<td>`** – komórki z danymi.
 
 2. **Dodaj style do tabeli w `style.css`:**
 
    ```css
    table {
-       width: 50%;
+       width: 100%;
        border-collapse: collapse;
-       margin: 20px 0;
+       margin-bottom: 20px;
+   }
+
+   table, th, td {
+       border: 1px solid #ddd;
    }
 
    th, td {
-       padding: 8px 12px;
-       text-align: left;
+       padding: 10px;
+       text-align: center;
+   }
+
+   th {
+       background-color: #e0acd5;
+       color: #fff;
+   }
+
+   tr:nth-child(even) {
+       background-color: #f9f9f9;
    }
    ```
 
-**Commit:** "Dodanie tabeli z danymi"
+   **Wyjaśnienie kodu:**
+
+   - `border-collapse: collapse;` – usuwa odstępy między komórkami.
+   - `tr:nth-child(even)` – zmienia tło co drugiego wiersza, tworząc efekt paskowania.
+
+**Commit:** "Dodanie tabeli cennika usług na stronie 'Oferta'"
 
 ---
 
-#### **Krok 9: Dodanie linku do pobrania pliku tekstowego**
+#### **Krok 9: Dodanie linku do pobrania pliku tekstowego (np. cennika w PDF)**
 
-1. **Umieść plik `dokument.txt` w folderze projektu.**
-2. **Dodaj link do pobrania pliku w `index.html`:**
+1. **Umieść plik `cennik.pdf` w folderze projektu.**
+
+2. **W sekcji `#content` na stronie `oferta.html`, dodaj link do pobrania pliku:**
 
    ```html
-   <a href="dokument.txt" download>Pobierz plik tekstowy</a>
+   <p>Pełny cennik usług dostępny jest w pliku PDF:</p>
+   <a href="cennik.pdf" download>Pobierz cennik usług (PDF)</a>
    ```
 
-**Commit:** "Dodanie linku do pobrania pliku tekstowego"
+   **Wyjaśnienie kodu:**
+
+   - **Element `<a>` z atrybutem `download`** – umożliwia pobranie pliku po kliknięciu linku.
+   - `href="cennik.pdf"` – ścieżka do pliku PDF z cennikiem.
+
+**Commit:** "Dodanie linku do pobrania cennika usług w PDF"
 
 ---
 
 ### **Podsumowanie**
 
-Gratulacje! Ukończyłeś tutorial przypominający podstawy HTML i CSS. Wszystkie zmiany zapisz w swoim repozytorium na GitHub.
+Gratulacje! Ukończyłeś tworzenie kompletnej strony internetowej salonu kosmetycznego. Strona zawiera wszystkie niezbędne elementy, takie jak nagłówek, menu, treść, obrazy, tabela z cennikiem i formularz kontaktowy.
 
 ---
 
-**Ćwiczenie: Przypomnienie podstaw HTML i zewnętrznego stylu CSS**
+**Przypomnienie:**
+
+- **Po każdym etapie pamiętaj o wykonaniu commita z odpowiednim opisem.**
+- **Zapisz wszystkie zmiany w swoim repozytorium na GitHub.**
+
+---
+
+**Powodzenia!**
 
 ---
 
