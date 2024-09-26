@@ -436,173 +436,408 @@ Gratulacje! Ukończyłeś tworzenie kompletnej strony internetowej salonu kosmet
 
 ---
 
-### **Część II: Ćwiczenia do samodzielnej realizacji (z konkretnymi parametrami)**
-
-Twoim zadaniem jest stworzenie strony internetowej zgodnie z poniższymi, szczegółowymi wytycznymi. Ćwiczenie to ma na celu utrwalenie umiejętności potrzebnych do egzaminu kwalifikacyjnego INF.03. Pamiętaj o wykonywaniu commitów z opisami po każdym etapie i zapisywaniu zmian w swoim repozytorium na GitHub.
+**Ćwiczenie: Tworzenie Strony Internetowej dla Restauracji "Smakosz"**
 
 ---
 
-#### **Zadanie 1: Struktura strony**
+### **Część I: Tutorial krok po kroku**
 
-- **Utwórz plik `index.html` z podstawową strukturą HTML.**
-
-- **Podziel stronę na 5 bloków za pomocą elementów `<div>` lub semantycznych znaczników HTML5, z następującymi identyfikatorami i stylami:**
-
-  1. **Nagłówek (`header`):**
-     - Szerokość: 100%
-     - Wysokość: 120 pikseli
-     - Kolor tła: niebieski (#1E90FF)
-
-  2. **Menu nawigacyjne (`nav`):**
-     - Szerokość: 100%
-     - Wysokość: 40 pikseli
-     - Kolor tła: stalowy niebieski (#4682B4)
-
-  3. **Główna zawartość (`main`):**
-     - Szerokość: 70%
-     - Minimalna wysokość: 400 pikseli
-     - Kolor tła: alabastrowy (#F0F8FF)
-     - Umieszczony po lewej stronie
-
-  4. **Panel boczny (`aside`):**
-     - Szerokość: 30%
-     - Minimalna wysokość: 400 pikseli
-     - Kolor tła: jasny stalowy niebieski (#B0C4DE)
-     - Umieszczony po prawej stronie
-
-  5. **Stopka (`footer`):**
-     - Szerokość: 100%
-     - Wysokość: 60 pikseli
-     - Kolor tła: niebieski (#1E90FF)
-
-**Commit:** "Dodanie struktury strony z 5 blokami o określonych parametrach"
+*Zostaje zachowana jako część poprzedniego ćwiczenia, zawierająca szczegółowe instrukcje, kod HTML i CSS oraz wyjaśnienia poszczególnych linijek kodu. Przypominam, że część ta została już przygotowana wcześniej.*
 
 ---
 
-#### **Zadanie 2: Stylizacja bloków**
+### **Część II: Ćwiczenia do samodzielnej realizacji**
 
-- **Ustaw style dla każdego bloku w zewnętrznym pliku CSS `style.css`, zgodnie z następującymi wytycznymi:**
-
-  - **Nagłówek (`header`):**
-    - Wyśrodkowany tekst w pionie i poziomie
-    - Kolor tekstu: biały
-    - Rozmiar czcionki: 32 piksele
-    - Czcionka: Arial, sans-serif
-
-  - **Menu nawigacyjne (`nav`):**
-    - Lista pozioma z linkami
-    - Linki bez podkreślenia
-    - Kolor tekstu linków: biały
-    - Przy najechaniu kursorem na link, zmienia się kolor tekstu na jasny niebieski (#ADD8E6)
-
-  - **Główna zawartość (`main`):**
-    - Wewnętrzny odstęp (padding): 20 pikseli
-    - Tekst wyrównany do lewej
-    - Kolor tekstu: granatowy (#000080)
-    - Rozmiar czcionki: 18 pikseli
-
-  - **Panel boczny (`aside`):**
-    - Wewnętrzny odstęp (padding): 20 pikseli
-    - Kolor tekstu: granatowy (#000080)
-    - Rozmiar czcionki: 16 pikseli
-
-  - **Stopka (`footer`):**
-    - Wyśrodkowany tekst w pionie i poziomie
-    - Kolor tekstu: biały
-    - Rozmiar czcionki: 14 pikseli
-
-**Commit:** "Ustawienie stylów dla każdego bloku zgodnie z wytycznymi"
+Twoim zadaniem jest stworzenie strony internetowej dla fikcyjnej restauracji "Smakosz" zgodnie z poniższymi wytycznymi. Strona powinna być estetyczna, funkcjonalna i zgodna z określonymi założeniami, jakbyś otrzymał ją od zleceniodawcy. Nie otrzymujesz gotowych rozwiązań – musisz samodzielnie zaimplementować wszystkie elementy zgodnie z podanymi parametrami. Pamiętaj o wykonywaniu commitów z opisami po każdym etapie i zapisywaniu zmian w swoim repozytorium na GitHub.
 
 ---
 
-#### **Zadanie 3: Treść strony**
+#### **Zadanie 1: Struktura Strony Głównej**
 
-- **W bloku głównej zawartości (`main`) dodaj artykuł składający się z:**
+**Koncepcja:**
+Stwórz stronę główną dla restauracji "Smakosz", która będzie zawierała nagłówek, menu nawigacyjne, sekcję główną z informacjami o restauracji, galerię zdjęć, tabelę z menu oraz stopkę z informacjami kontaktowymi.
 
-  - **Tytułu (np. "Witamy na naszej stronie")**
-    - Kolor tekstu: midnight blue (#191970)
-    - Rozmiar czcionki: 28 pikseli
+**Wytyczne:**
 
-  - **Paragrafu z tekstem (możesz użyć tekstu zastępczego)**
-    - Interlinia: 1.6
-    - Tekst wyjustowany
+1. **Nagłówek (`header`):**
+   - **Tekst:** "Restauracja Smakosz"
+   - **Kolor tła:** #8B0000 (ciemny czerwony)
+   - **Kolor tekstu:** #FFFFFF (biały)
+   - **Czcionka:** 'Georgia, serif'
+   - **Rozmiar czcionki:** 36px
+   - **Wysokość:** 150px
+   - **Wyśrodkowanie tekstu zarówno w pionie, jak i poziomie**
 
-- **W panelu bocznym (`aside`) dodaj sekcję z nagłówkiem (np. "Nawigacja") i listą linków do różnych sekcji strony (mogą to być linki do fragmentów na tej samej stronie).**
-  - Kolor tekstu nagłówka: midnight blue (#191970)
-  - Rozmiar czcionki nagłówka: 22 piksele
+2. **Menu nawigacyjne (`nav`):**
+   - **Tło:** #D2691E (ciemnobrązowy)
+   - **Linki:**
+     - "Strona główna" – link do `index.html`
+     - "Menu" – link do `menu.html`
+     - "Galeria" – link do `galeria.html`
+     - "Kontakt" – link do `kontakt.html`
+     - "Zarezerwuj stolik" – link do `rezerwacja.html`
+   - **Kolor tekstu linków:** #FFFFFF (biały)
+   - **Rozmiar czcionki linków:** 18px
+   - **Czcionka linków:** 'Arial, sans-serif'
+   - **Efekt przy najechaniu:** zmiana koloru tła linku na #A0522D (brązowy) i tekstu na #FFD700 (złoty)
+   - **Układ:** poziomy, elementy wyświetlane obok siebie z równym odstępem
 
-**Commit:** "Dodanie treści do bloków main i aside zgodnie z wytycznymi"
+3. **Sekcja główna (`main`):**
+   - **Podział na dwie kolumny:**
+     - **Lewa kolumna (70% szerokości):** Informacje o restauracji
+       - **Nagłówek:** "O Nas"
+         - **Kolor tekstu:** #8B0000 (ciemny czerwony)
+         - **Rozmiar czcionki:** 28px
+         - **Czcionka:** 'Georgia, serif'
+       - **Paragraf:** Opis restauracji (minimum 3 zdania)
+         - **Kolor tekstu:** #333333 (ciemny szary)
+         - **Rozmiar czcionki:** 16px
+         - **Interlinia:** 1.5
+         - **Tekst wyjustowany**
+     - **Prawa kolumna (30% szerokości):** Galeria zdjęć
+       - **Dodaj dwa zdjęcia z opisami:**
+         - **Zdjęcie 1:** `wejscie.jpg` – "Eleganckie wejście do restauracji"
+         - **Zdjęcie 2:** `wnetrze.jpg` – "Przytulne wnętrze"
+         - **Szerokość zdjęć:** 100%
+         - **Obramowanie zdjęć:** 2px solid #8B0000
+         - **Opis zdjęć:** widoczny pod zdjęciem, czcionka: 'Arial, sans-serif', rozmiar: 14px, kolor: #555555
+
+4. **Tabela z Menu (`section.menu`):**
+   - **Nagłówek tabeli:** "Nasze Specjały"
+     - **Kolor tła nagłówków:** #A0522D (brązowy)
+     - **Kolor tekstu nagłówków:** #FFFFFF (biały)
+     - **Czcionka nagłówków:** 'Arial, sans-serif'
+     - **Rozmiar czcionki nagłówków:** 20px
+   - **Kolory wierszy:**
+     - **Naprzemiennie białe i #F5F5F5 (jasny szary)**
+   - **Kolor tekstu w komórkach:** #333333 (ciemny szary)
+   - **Czcionka w komórkach:** 'Verdana, sans-serif'
+   - **Rozmiar czcionki w komórkach:** 16px
+   - **Przykładowe dane w tabeli:**
+     - **Kolumny:** "Danie", "Opis", "Cena"
+     - **Wiersze:** Minimum 3 różne dania z opisem i ceną
+
+5. **Stopka (`footer`):**
+   - **Kolor tła:** #8B0000 (ciemny czerwony)
+   - **Kolor tekstu:** #FFFFFF (biały)
+   - **Czcionka:** 'Arial, sans-serif'
+   - **Rozmiar czcionki:** 14px
+   - **Zawartość:**
+     - **Adres:** ul. Smakosza 10, 00-001 Warszawa
+     - **Telefon:** 123-456-789
+     - **Email:** kontakt@smakosz.pl
+     - **Link do pobrania pliku PDF:** "Pobierz menu w PDF" – link do `menu.pdf`, z atrybutem `download`
+     - **Styl linku:** kolor #FFD700 (złoty), bez podkreślenia, podkreślenie przy najechaniu kursorem
+
+6. **Ogólne Style:**
+   - **Tło strony:** #FFF8DC (kukurydziany)
+   - **Marginesy:** 0 dla wszystkich elementów
+   - **Font-family całej strony:** 'Arial, sans-serif'
+   - **Responsive Design:** Upewnij się, że strona jest czytelna na różnych rozdzielczościach ekranów (minimum: 1024px szerokości)
+
+**Commit:** "Zadanie 1: Stworzenie struktury strony głównej dla restauracji 'Smakosz' z określonymi stylami"
 
 ---
 
-#### **Zadanie 4: Menu i podstrony**
+#### **Zadanie 2: Dodanie Treści do Sekcji "O Nas"**
 
-- **W menu nawigacyjnym (`nav`) dodaj linki do następujących stron:**
-  - **"Strona Główna" (link do `index.html`)**
-  - **"Galeria" (link do `galeria.html`)**
-  - **"Kontakt" (link do `kontakt.html`)**
+**Koncepcja:**
+W sekcji "O Nas" opisz krótko historię restauracji, jej misję oraz wartości, jakie reprezentuje.
 
-- **Utwórz plik `galeria.html` z tą samą strukturą co `index.html`. W bloku głównej zawartości umieść nagłówek "Galeria".**
+**Wytyczne:**
 
-- **W panelu bocznym (`aside`) dodaj link do strony zewnętrznej (np. "Ministerstwo Edukacji" z linkiem `https://www.gov.pl/web/edukacja`), który otwiera się w nowej karcie.**
+1. **Nagłówek:** "O Nas"
+   - **Kolor tekstu:** #8B0000 (ciemny czerwony)
+   - **Rozmiar czcionki:** 28px
+   - **Czcionka:** 'Georgia, serif'
 
-**Commit:** "Dodanie menu z linkami do podstron i strony zewnętrznej"
+2. **Paragraf:**
+   - **Treść:** Opis restauracji (minimum 3 zdania). Możesz użyć następującego przykładu:
+     > "Restauracja Smakosz została założona w 2010 roku z pasji do wyśmienitej kuchni i wyjątkowej obsługi. Naszym celem jest zapewnienie gościom niezapomnianych doznań kulinarnych w przytulnej atmosferze. Dbamy o najwyższą jakość składników i innowacyjne podejście do tradycyjnych dań."
+   - **Kolor tekstu:** #333333 (ciemny szary)
+   - **Rozmiar czcionki:** 16px
+   - **Interlinia:** 1.5
+   - **Tekst wyjustowany**
 
----
-
-#### **Zadanie 5: Galeria obrazów**
-
-- **W pliku `galeria.html` w bloku głównej zawartości (`main`) dodaj trzy obrazy:**
-
-  - **Obrazy o szerokości 250 pikseli, zachowujące proporcje wysokości**
-  - **Obrazy umieszczone obok siebie w jednym rzędzie**
-  - **Dodaj do obrazów atrybuty `alt` z opisem każdego obrazu**
-  - **Ustaw, aby po najechaniu kursorem na obraz, wyświetlał się efekt przyciemnienia oraz opis (za pomocą CSS i pseudo-klasy `:hover`)**
-
-**Commit:** "Dodanie galerii obrazów z efektami hover"
+**Commit:** "Zadanie 2: Dodanie treści do sekcji 'O Nas'"
 
 ---
 
-#### **Zadanie 6: Tabela**
+#### **Zadanie 3: Dodanie Tabeli z Menu**
 
-- **W pliku `index.html` w bloku głównej zawartości (`main`) dodaj tabelę przedstawiającą plan lekcji:**
+**Koncepcja:**
+Przedstaw w tabeli różnorodne dania oferowane przez restaurację wraz z opisem i ceną.
 
-  - **Tabela powinna zawierać:**
-    - **5 kolumn dla dni tygodnia (poniedziałek - piątek)**
-    - **8 wierszy dla godzin lekcyjnych (1 - 8)**
-  - **Wypełnij tabelę przykładowymi przedmiotami**
+**Wytyczne:**
 
-- **Stylizacja tabeli:**
+1. **Nagłówek tabeli:** "Nasze Specjały"
+   - **Kolor tła nagłówków:** #A0522D (brązowy)
+   - **Kolor tekstu nagłówków:** #FFFFFF (biały)
+   - **Czcionka nagłówków:** 'Arial, sans-serif'
+   - **Rozmiar czcionki nagłówków:** 20px
 
-  - **Szerokość tabeli: 100%**
-  - **Obramowanie tabeli oraz komórek: 1 piksel, solid, kolor szary (#ccc)**
-  - **Nagłówki tabeli (`th`) powinny mieć:**
-    - **Kolor tła: stalowy niebieski (#4682B4)**
-    - **Kolor tekstu: biały**
-    - **Wewnętrzny odstęp (padding): 8 pikseli**
-  - **Komórki tabeli (`td`):**
-    - **Wewnętrzny odstęp (padding): 8 pikseli**
-    - **Tekst wyśrodkowany**
-  - **Naprzemienne kolory wierszy (co drugi wiersz ma inny kolor tła, np. jasnoszary)**
+2. **Kolumny tabeli:** "Danie", "Opis", "Cena"
 
-**Commit:** "Dodanie tabeli z planem lekcji i jej stylizacja"
+3. **Przykładowe dane:**
+
+   | Danie               | Opis                                      | Cena  |
+   |---------------------|-------------------------------------------|-------|
+   | Pierogi Ruskie      | Tradycyjne pierogi z serem i ziemniakami  | 25 zł |
+   | Zupa Pomidorowa     | Aromatyczna zupa z dojrzałych pomidorów  | 18 zł |
+   | Stek Wołowy         | Soczysty stek z dodatkiem warzyw          | 60 zł |
+
+4. **Stylizacja tabeli:**
+   - **Szerokość:** 100%
+   - **Obramowanie:** 1px solid #ddd dla tabeli, nagłówków i komórek
+   - **Padding:** 10px dla nagłówków i komórek
+   - **Wyrównanie tekstu:** wyśrodkowany
+   - **Naprzemienne kolory wierszy:** co drugi wiersz ma tło #F9F9F9 (jasny szary)
+
+**Commit:** "Zadanie 3: Dodanie tabeli z menu restauracji"
 
 ---
 
-#### **Zadanie 7: Link do pobrania pliku**
+#### **Zadanie 4: Dodanie Galerii Zdjęć**
 
-- **W stopce (`footer`) dodaj link do pobrania pliku PDF (np. `regulamin.pdf`):**
+**Koncepcja:**
+Pokaż atmosferę restauracji oraz przykładowe dania poprzez galerię zdjęć.
 
-  - **Tekst linku: "Pobierz regulamin strony"**
-  - **Link powinien pobierać plik po kliknięciu (użyj atrybutu `download`)**
+**Wytyczne:**
 
-- **Stylizacja linku:**
+1. **Sekcja:** "Galeria"
+   - **Nagłówek:** "Galeria"
+     - **Kolor tekstu:** #8B0000 (ciemny czerwony)
+     - **Rozmiar czcionki:** 28px
+     - **Czcionka:** 'Georgia, serif'
 
-  - **Kolor tekstu linku: biały**
-  - **Brak podkreślenia**
-  - **Przy najechaniu kursorem na link, tekst jest podkreślony**
+2. **Zdjęcia:**
+   - **Ilość:** 3 zdjęcia
+   - **Nazwy plików:** `salon.jpg`, `danie1.jpg`, `danie2.jpg`
+   - **Opis zdjęć:**
+     - `salon.jpg` – "Eleganckie wnętrze restauracji"
+     - `danie1.jpg` – "Pierogi Ruskie z dodatkami"
+     - `danie2.jpg` – "Soczysty stek wołowy"
+   - **Szerokość zdjęć:** 30% szerokości kontenera
+   - **Obramowanie zdjęć:** 2px solid #8B0000
+   - **Opis zdjęć:** widoczny pod zdjęciem, czcionka: 'Arial, sans-serif', rozmiar: 14px, kolor: #555555
+   - **Efekt przy najechaniu:** przyciemnienie zdjęcia do 80% przez zmianę `opacity` na 0.8
 
-**Commit:** "Dodanie linku do pobrania pliku PDF w stopce"
+3. **Stylizacja galerii:**
+   - **Użyj flexbox do ułożenia zdjęć obok siebie z równymi odstępami**
+   - **Dodaj marginesy wokół zdjęć: 10px**
+   - **Zaokrągl rogi zdjęć: border-radius: 5px**
+
+**Commit:** "Zadanie 4: Dodanie galerii zdjęć restauracji"
+
+---
+
+#### **Zadanie 5: Dodanie Formularza Kontaktowego**
+
+**Koncepcja:**
+Umożliw klientom kontakt z restauracją poprzez prosty formularz.
+
+**Wytyczne:**
+
+1. **Sekcja:** "Kontakt"
+   - **Nagłówek:** "Kontakt"
+     - **Kolor tekstu:** #8B0000 (ciemny czerwony)
+     - **Rozmiar czcionki:** 28px
+     - **Czcionka:** 'Georgia, serif'
+
+2. **Dane kontaktowe:**
+   - **Adres:** ul. Smakosza 10, 00-001 Warszawa
+   - **Telefon:** 123-456-789
+   - **Email:** kontakt@smakosz.pl
+   - **Stylizacja tekstu:** 
+     - **Kolor:** #333333 (ciemny szary)
+     - **Rozmiar czcionki:** 16px
+
+3. **Formularz:**
+   - **Nagłówek:** "Formularz kontaktowy"
+     - **Kolor tekstu:** #8B0000 (ciemny czerwony)
+     - **Rozmiar czcionki:** 22px
+     - **Czcionka:** 'Arial, sans-serif'
+   - **Pola formularza:**
+     - **Imię:**
+       - **Element:** `<input type="text" id="name" name="name">`
+       - **Placeholder:** "Twoje imię"
+     - **Email:**
+       - **Element:** `<input type="email" id="email" name="email">`
+       - **Placeholder:** "Twój email"
+     - **Wiadomość:**
+       - **Element:** `<textarea id="message" name="message" rows="5" placeholder="Twoja wiadomość"></textarea>`
+   - **Przycisk wysyłania:**
+     - **Element:** `<input type="submit" value="Wyślij">`
+     - **Stylizacja przycisku:** 
+       - **Tło:** #8B0000
+       - **Kolor tekstu:** #FFFFFF
+       - **Padding:** 10px 20px
+       - **Border:** none
+       - **Border-radius:** 5px
+       - **Efekt przy najechaniu:** tło zmienia się na #A0522D
+
+4. **Stylizacja formularza w CSS:**
+   - **Elementy formularza:**
+     - **Pola input i textarea:**
+       - **Width:** 100%
+       - **Padding:** 10px
+       - **Margin-bottom:** 15px
+       - **Border:** 1px solid #ccc
+       - **Border-radius:** 4px
+   - **Przycisk:**
+     - **Dodaj hover effect w CSS:**
+       ```css
+       form input[type="submit"]:hover {
+           background-color: #A0522D;
+           cursor: pointer;
+       }
+       ```
+
+**Commit:** "Zadanie 5: Dodanie formularza kontaktowego"
+
+---
+
+#### **Zadanie 6: Dodanie Linku do Pobrania Pliku PDF z Menu**
+
+**Koncepcja:**
+Udostępnij klientom możliwość pobrania pełnego menu w formacie PDF.
+
+**Wytyczne:**
+
+1. **Plik PDF:**
+   - **Nazwa pliku:** `menu.pdf`
+   - **Zawartość:** Pełne menu restauracji "Smakosz"
+
+2. **Link do pobrania:**
+   - **Tekst linku:** "Pobierz pełne menu (PDF)"
+   - **Umiejscowienie:** w sekcji "Menu" poniżej tabeli z menu
+   - **Atrybuty:** `href="menu.pdf"` oraz `download`
+   - **Stylizacja linku:** 
+     - **Kolor tekstu:** #FFD700 (złoty)
+     - **Brak podkreślenia**
+     - **Efekt przy najechaniu:** tekst jest podkreślony
+
+   - **Przykład kodu HTML:**
+     ```html
+     <p>Pobierz pełne menu:</p>
+     <a href="menu.pdf" download class="download-link">Pobierz pełne menu (PDF)</a>
+     ```
+
+3. **Stylizacja linku w CSS:**
+   - **Dodaj do `style.css`:**
+     ```css
+     .download-link {
+         color: #FFD700;
+         text-decoration: none;
+     }
+
+     .download-link:hover {
+         text-decoration: underline;
+     }
+     ```
+
+**Commit:** "Zadanie 6: Dodanie linku do pobrania menu w PDF"
+
+---
+
+#### **Zadanie 7: Stylizacja Ogólna Strony**
+
+**Koncepcja:**
+Ulepsz wygląd strony, dbając o spójność kolorystyczną, czcionki oraz responsywność.
+
+**Wytyczne:**
+
+1. **Czcionki:**
+   - **Nagłówki (`h1`, `h2`, `h3`):** 'Georgia, serif'
+   - **Teksty paragrafów i list:** 'Arial, sans-serif'
+   - **Linki:** 'Arial, sans-serif'
+
+2. **Kolory:**
+   - **Tło strony:** #FFF8DC (kukurydziany)
+   - **Nagłówki:** #8B0000 (ciemny czerwony)
+   - **Tekst paragrafów:** #333333 (ciemny szary)
+   - **Linki:** #FFFFFF (biały) w menu, #FFD700 (złoty) w stopce
+   - **Przy najechaniu na linki w menu:** tło #A0522D (brązowy), tekst #FFD700 (złoty)
+
+3. **Rozmiary czcionek:**
+   - **Nagłówki:**
+     - `h1`: 36px
+     - `h2`: 28px
+     - `h3`: 22px
+   - **Tekst paragrafów i list:** 16px
+   - **Linki w menu:** 18px
+   - **Opis zdjęć:** 14px
+
+4. **Marginesy i odstępy:**
+   - **Sekcje:** 20px padding wewnętrzny
+   - **Elementy list i tabel:** odpowiednie marginesy dla czytelności
+   - **Galeria:** marginesy 10px między zdjęciami
+
+5. **Responsive Design:**
+   - **Użyj media queries w CSS, aby dostosować układ na urządzeniach mobilnych:**
+     - **Menu nawigacyjne:** zmiana z poziomego na pionowy układ
+     - **Galeria zdjęć:** ułożenie zdjęć jeden pod drugim na mniejszych ekranach
+
+   - **Przykład media query:**
+     ```css
+     @media screen and (max-width: 768px) {
+         #menu li {
+             float: none;
+             width: 100%;
+         }
+
+         .gallery {
+             display: block;
+         }
+
+         .gallery img {
+             width: 100%;
+             margin-bottom: 10px;
+         }
+     }
+     ```
+
+**Commit:** "Zadanie 7: Stylizacja ogólna strony dla restauracji 'Smakosz'"
+
+---
+
+#### **Zadanie 8: Dodanie Linku do Pobrania Pliku PDF w Stopce**
+
+**Koncepcja:**
+Ułatw klientom dostęp do menu poprzez link w stopce.
+
+**Wytyczne:**
+
+1. **Link do pobrania:**
+   - **Tekst linku:** "Pobierz pełne menu (PDF)"
+   - **Atrybuty:** `href="menu.pdf"` oraz `download`
+   - **Stylizacja linku:**
+     - **Kolor tekstu:** #FFD700 (złoty)
+     - **Brak podkreślenia**
+     - **Efekt przy najechaniu:** tekst jest podkreślony
+
+2. **Umiejscowienie:** w sekcji `footer` poniżej danych kontaktowych
+
+3. **Przykład kodu HTML:**
+   ```html
+   <p>Pobierz pełne menu:</p>
+   <a href="menu.pdf" download class="download-link">Pobierz pełne menu (PDF)</a>
+   ```
+
+4. **Stylizacja linku w CSS:**
+   - **Dodaj do `style.css`:**
+     ```css
+     .download-link {
+         color: #FFD700;
+         text-decoration: none;
+     }
+
+     .download-link:hover {
+         text-decoration: underline;
+     }
+     ```
+
+**Commit:** "Zadanie 8: Dodanie linku do pobrania menu w PDF w stopce"
 
 ---
 
@@ -613,4 +848,17 @@ Twoim zadaniem jest stworzenie strony internetowej zgodnie z poniższymi, szczeg
 
 ---
 
-**Powodzenia w realizacji zadania!**
+**Powodzenia w realizacji zadania! Twój profesjonalny projekt strony internetowej restauracji "Smakosz" czeka na wykonanie.**
+
+---
+
+### **Dodatkowe Wskazówki:**
+
+- **Używaj semantycznych znaczników HTML5** (np. `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`) zamiast `<div>` tam, gdzie to możliwe.
+- **Optymalizuj obrazy** pod kątem webu, aby strona ładowała się szybko.
+- **Sprawdzaj poprawność kodu** za pomocą walidatora HTML i CSS.
+- **Testuj stronę na różnych przeglądarkach i urządzeniach**, aby upewnić się, że wygląda dobrze wszędzie.
+
+---
+
+**Powodzenia! Twój profesjonalny projekt strony internetowej czeka na realizację.**
